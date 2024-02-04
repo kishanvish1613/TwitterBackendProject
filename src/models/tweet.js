@@ -11,7 +11,7 @@ const tweetSchema = new mongoose.Schema({
         type: Number
     },
     comment: {
-        type: mongoose.Schema.ObjectId
+        type: mongoose.Schema.Types.ObjectId,
     }
 },{timestamps: true});
 

@@ -1,17 +1,23 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import connect from './config/database.js';
-import TweetRepository from './repository/tweet-repository.js'
+
+import apiRoutes from './routes/index.js'
 
 
 
 const app = express();
 const PORT = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use('/api', apiRoutes);
+
 app.listen(PORT, async ()=> {
     console.log(`server started at ${PORT}`);
     connect();
     console.log('mongo DB connected');
-    // const repo = new TweetRepository();
-    // const res = await repo.deleteTweet('65bfd14b2f29c60171c7ccef');
-    // console.log(res);
+
+
 })

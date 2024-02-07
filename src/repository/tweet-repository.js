@@ -1,6 +1,13 @@
 import Tweet from "../models/tweet.js";
 
-class TweetRepository {
+import CrudRepository from "./crud-repository.js";
+
+class TweetRepository extends CrudRepository{
+
+    constructor() {
+        super(Tweet);
+    }
+
     async create(data) {
         try {
             const result = await Tweet.create(data);
@@ -13,7 +20,7 @@ class TweetRepository {
 
     async getTweets(){
         try {
-            const response = await Tweet.find({});
+            const response = await Tweet.find();
             return response;
         } catch (error) {
             console.log('something went wrong in tweet-repo');

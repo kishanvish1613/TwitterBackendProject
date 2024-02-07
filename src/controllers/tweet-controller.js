@@ -39,3 +39,24 @@ export const get = async (req, res) => {
         })
     }
 }
+
+
+
+export const getTweets = async (req, res) => {
+    try {
+        const result = await tweetService.getAllTweet();
+        return res.status(200).json({
+            data: result,
+            success: true,
+            message: "successfully fetched tweets",
+            err: {} // This should be null or removed if there's no error
+        });
+    } catch (error) {
+        return res.status(500).json({
+            data: null,
+            success: false,
+            message: "unable to fetch tweets",
+            err: error.message // Return the error message to the client
+        });
+    }
+}

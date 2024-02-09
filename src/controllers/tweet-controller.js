@@ -21,7 +21,7 @@ export const create = async (req, res) => {
     }
 }
 
-export const get = async (req, res) => {
+export const getById = async (req, res) => {
     try {
         const result = await tweetService.getTweet(req.query.id); 
         return res.status(200).json({
@@ -37,7 +37,7 @@ export const get = async (req, res) => {
             message: "not able to fetch a tweet",
             err: error
         })
-    }
+    } 
 }
 
 

@@ -40,9 +40,9 @@ class TweetService {
         }
     }
 
-    async getAllTweet(){
+    async getTweetComment(id){
         try {
-            const result = await this.tweetRepository.getTweets();
+            const result = await this.tweetRepository.getTweetsWithComment(id);
             return result;
         } catch (error) {
             console.log("something went wrong in tweet-service");

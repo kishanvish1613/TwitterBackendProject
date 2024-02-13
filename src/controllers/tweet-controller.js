@@ -21,20 +21,20 @@ export const create = async (req, res) => {
     }
 }
 
-export const getById = async (req, res) => {
+export const getTweetWithComments = async (req, res) => {
     try {
-        const result = await tweetService.getTweet(req.query.id); 
+        const result = await tweetService.getTweetComment(req.params.id); 
         return res.status(200).json({
             data: result,
             success: true,
-            message: "successfully fetch a tweet",
+            message: "successfully fetch a tweet with comment",
             err: {}
         })
     } catch (error) {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "not able to fetch a tweet",
+            message: "not able to fetch a tweet with comment",
             err: error
         })
     } 

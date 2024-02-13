@@ -5,11 +5,10 @@ const commentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId
-    },
-    comments: {
-        type: String,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     },
     onModel: {
         type: String,
@@ -17,10 +16,16 @@ const commentSchema = new mongoose.Schema({
         enum: ['Tweet', 'Comment']
     },
     commentable: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
-        refPath: ''
-    }
+        refPath: 'onModel'
+    },
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment',
+        }
+    ] 
 },{timestamps: true});
 
 const Comment = mongoose.model('Comment', commentSchema);

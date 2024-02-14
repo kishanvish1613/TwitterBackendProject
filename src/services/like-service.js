@@ -1,10 +1,12 @@
 import LikeRepository from "../repository/like-repository.js";
 import TweetRepository from "../repository/tweet-repository.js";
+import CommentRepository from "../repository/comment-repository.js";
 
 class LikeService {
     constructor () {
         this.likeRepository = new LikeRepository();
         this.tweetRepository = new TweetRepository();
+        this.commentRepository = new CommentRepository();
     }
 
     /**
@@ -18,7 +20,7 @@ class LikeService {
             // getting -> Tweet -> ID 
             likeable = await this.tweetRepository.getById(modelId);
         }else if(modelType === 'Comment'){
-
+            likeable = await this.commentRepository.get(modelId);
         }else{
             console.log("wrong modelType");
             return

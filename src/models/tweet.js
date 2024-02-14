@@ -12,9 +12,6 @@ const tweetSchema = new mongoose.Schema({
             ref: 'Like'
         }
     ],
-    noOfRetweets: {
-        type: Number
-    },
     comments: [
         {
             type: mongoose.Schema.Types.ObjectId,

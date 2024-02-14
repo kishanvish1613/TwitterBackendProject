@@ -30,7 +30,7 @@ class HashatagRepository extends CrudRepository{
         try {
             const response = await Hashatag.find({
                 text: text
-            })
+            });
             return response;
         } catch (error) {
             console.log('something went wrong in hash-repo');

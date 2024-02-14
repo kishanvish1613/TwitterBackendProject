@@ -6,29 +6,40 @@ class TweetService {
         this.tweetRepository = new TweetRepository();
     }
 
-    async create(data){
-        const content = data.content;
-        let tags = content.match(/#+[a-zA-Z0-9(_)]+/g).map((tag) => tag.substring(1).toLowerCase());
-        // storing/creating tweet
-        const tweet = await this.tweetRepository.create(data);
-        // storing unique hashtag
-        let alreadyPresentHashatag = await this.hashatagRepository.getHashtagByName(tags);
-        let textOfPresentTags = alreadyPresentHashatag.map(tags => tags.text);
-        let newTags = tags.filter(tag => !textOfPresentTags.includes(tag));
-        newTags = newTags.map(tag => {
-            return {
-                text: tag,
-                tweets: [tweet.id]
+    async create(data) {
+        try {
+            const content = data.content;
+            let tags = content.match(/#+[a-zA-Z0-9(_)]+/g)?.map((tag) => tag.substring(1).toLowerCase()) || [];
+            // storing/creating tweet
+            const tweet = await this.tweetRepository.create(data);
+            // storing unique hashtag
+            let alreadyPresentHashatag = await this.hashatagRepository.getHashtagByName(tags);
+            let textOfPresentTags = [];
+            if (alreadyPresentHashatag) {
+                textOfPresentTags = alreadyPresentHashatag.map(tag => tag.text);
             }
-        });
-        await this.hashatagRepository.bulkCreate(newTags);
-        alreadyPresentHashatag.forEach((tag) => {
-            tag.tweets.push(tweet.id);
-            tags.save();
-        })
-
-        return tweet;
+            let newTags = tags.filter(tag => !textOfPresentTags.includes(tag));
+            newTags = newTags.map(tag => {
+                return {
+                    text: tag,
+                    tweets: [tweet.id]
+                }
+            });
+            await this.hashatagRepository.bulkCreate(newTags);
+            if (alreadyPresentHashatag) {
+                alreadyPresentHashatag.forEach(async (tag) => {
+                    tag.tweets.push(tweet.id);
+                    tag.save();
+                });
+            }
+            
+            return tweet;
+        } catch (error) {
+            console.error('Error in tweet service:', error);
+            throw error;
+        }
     }
+    
 
     async getTweet(id){
         try {

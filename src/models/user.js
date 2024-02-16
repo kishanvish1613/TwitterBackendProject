@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema({
     tweets: [
         {
             type: mongoose.Schema.Types.ObjectId,
+            ref: 'Tweet',
         }
     ],
     userName: {
@@ -44,7 +45,7 @@ userSchema.methods.genJWT = function generate() {
     return jwt.sign({
         id: this._id,
         email: this.email
-    }, 'twitter_secret',{expiresIn: '1h'});
+    }, 'twitter_secret',{expiresIn: '1h'}); // 1m 3d, 360d
 }
 
 const User = mongoose.model('User', userSchema);

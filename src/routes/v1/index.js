@@ -6,11 +6,12 @@ import {
 import { signUp, signIn } from "../../controllers/user-controller.js";
 import { toggleLike } from "../../controllers/like-controller.js";
 import { createComment } from "../../controllers/comment-controller.js";
-// import { passportAuth } from "../../middlewares/jwt-middleware.js";
+import {authenticate} from '../../middlewares/authenticate.js'
+
 
 const router = express.Router();
 
-router.post("/tweets", create);
+router.post("/tweets", authenticate, create);
 router.get("/tweets/:id", getTweetWithComments);
 
 router.post("/signUp", signUp);

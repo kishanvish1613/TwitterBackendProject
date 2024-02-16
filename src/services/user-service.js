@@ -1,5 +1,4 @@
 import UserRepository from '../repository/user-repository.js';
-import User from '../models/user.js';
 
 class UserService{
     constructor () {

@@ -1,8 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors'
-import connect from './config/database.js';
+import passport from 'passport';
 
+import connect from './config/database.js';
+import {passportAuth} from './middlewares/jwt-middleware.js'
 import apiRoutes from './routes/index.js'
 
 
@@ -14,6 +16,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cors());
+
+app.use(passport.initialize())
+passportAuth(passport);
 
 app.use('/api', apiRoutes);
 

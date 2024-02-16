@@ -1,22 +1,23 @@
-import express from 'express';
-import {create, getTweetWithComments} from '../../controllers/tweet-controller.js';
-import {signUp, signIn} from '../../controllers/user-controller.js'
-import {toggleLike} from '../../controllers/like-controller.js'
-import {createComment} from '../../controllers/comment-controller.js'
-
+import express from "express";
+import {
+  create,
+  getTweetWithComments,
+} from "../../controllers/tweet-controller.js";
+import { signUp, signIn } from "../../controllers/user-controller.js";
+import { toggleLike } from "../../controllers/like-controller.js";
+import { createComment } from "../../controllers/comment-controller.js";
+// import { passportAuth } from "../../middlewares/jwt-middleware.js";
 
 const router = express.Router();
 
-router.post('/tweets', create);
-router.get('/tweets/:id', getTweetWithComments)
+router.post("/tweets", create);
+router.get("/tweets/:id", getTweetWithComments);
 
+router.post("/signUp", signUp);
+router.post("/signIn", signIn);
 
-router.post('/signUp', signUp);
-router.post('/signIn', signIn);
+router.post("/likes/toggle", toggleLike);
 
-router.post('/likes/toggle', toggleLike);
-
-router.post('/comments', createComment);
-
+router.post("/comments", createComment);
 
 export default router;

@@ -1,4 +1,5 @@
-import UserRepository from '../repository/user-repository.js'
+import UserRepository from '../repository/user-repository.js';
+import User from '../models/user.js';
 
 class UserService{
     constructor () {
@@ -10,34 +11,35 @@ class UserService{
             const user = await this.userRepository.create(data);
             return user;
         } catch (error) {
-            console.log("something went wrong in user-service");
+            console.log("something went wrong in signUp user-service");
             throw error;
         }
     }
 
-    async signIn_Service (data){
+    async signIn_Service(data){
         try {
-            // get the email first
             const email = data.email;
             const currentPassword = data.password;
-            const result = await this.userRepository.findByEmail({email});
-            if(!result){
+            const user = await this.userRepository.findByEmail({email});
+            if(!user){
                 throw{
-                    message: 'No User Found'
+                    message: 'No user found'
                 }
             }
-
-            // compare password
-            if(!result.comparePassword(currentPassword)){
-                throw {
-                    message: 'Incorrect Password'
+            if(!user.comparePassword(currentPassword)){
+                throw{
+                    message: 'Incorrect password'
                 }
             }
-             
+            console.log("User succefully signed in")
+            const token = user.genJWT();
+            return token;
+            
         } catch (error) {
-            console.log("something went wrong in user-service");
+            //console.log("something went wrong in signIn user-service");
             throw error;
         }
+
     }
 
 }

@@ -7,6 +7,7 @@ class TweetService {
     }
 
     async create(data) {
+        console.log(data);
         try {
             const content = data.content;
             let tags = content.match(/#+[a-zA-Z0-9(_)]+/g)?.map((tag) => tag.substring(1).toLowerCase()) || [];

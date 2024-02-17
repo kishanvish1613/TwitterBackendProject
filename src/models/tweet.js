@@ -9,7 +9,7 @@ const tweetSchema = new mongoose.Schema({
     user:{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
-            required: true
+            // required: true
         },
     likes: [
         {
@@ -23,6 +23,9 @@ const tweetSchema = new mongoose.Schema({
             ref: 'Comment'
         }
     ],
+    image: {
+        type: String
+    }
 },{timestamps: true});
 
 const Tweet = mongoose.model('Tweet', tweetSchema);

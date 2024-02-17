@@ -6,12 +6,11 @@ const tweetSchema = new mongoose.Schema({
         required: true,
         max: [250, 'Tweet cannot be more then 250 characters']
     },
-    user: [
-        {
+    user:{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
-        }
-    ],
+            required: true
+        },
     likes: [
         {
             type: mongoose.Schema.Types.ObjectId,

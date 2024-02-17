@@ -13,7 +13,6 @@ export const create = async (req, res) => {
                 err: err
             })
         }
-        console.log('image url is', req.file);
         const reqdata = req.body;
         reqdata.image = req.file.location;
         const response = await tweetService.create(reqdata);

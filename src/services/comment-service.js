@@ -28,7 +28,17 @@ class CommentService {
         await commentable.save();
 
         return comment;
-    }   
+    }
+
+    async getCommentById (id){
+        try {
+            const result = await this.commentRepository.getwithComment(id);
+            return result;
+        } catch (error) {
+            console.log("something went wrong in comment service");
+            throw error;
+        }
+    }
 
 
 }

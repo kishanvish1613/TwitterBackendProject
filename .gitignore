@@ -1,4 +1,2 @@
 node_modules
-src/config/database.js
-temp.txt
 .env

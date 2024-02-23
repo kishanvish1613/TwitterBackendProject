@@ -46,6 +46,16 @@ class TweetRepository extends CrudRepository{
         }
     }
 
+    async getAllTweets() {
+        try {
+            const response = await Tweet.find({});
+            return response;
+        } catch (error) {
+            console.log('something went wrong in tweet-repo');
+            throw error;
+        }
+    }
+
     async deleteTweet(userId){
         try {
             const response = await Tweet.findByIdAndDelete(userId);

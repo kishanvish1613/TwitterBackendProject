@@ -54,7 +54,7 @@ export const getTweetWithComments = async (req, res) => {
 
 export const getTweets = async (req, res) => {
   try {
-    const result = await tweetService.getAllTweet();
+    const result = await tweetService.getTweetAlls();
     return res.status(200).json({
       data: result,
       success: true,
@@ -70,3 +70,6 @@ export const getTweets = async (req, res) => {
     });
   }
 };
+
+
+

@@ -12,7 +12,7 @@ import {authenticate} from '../../middlewares/authenticate.js'
 
 const router = express.Router();
 
-router.post("/tweets", create);
+router.post("/tweets", authenticate, create);
 router.get("/tweets/:id", getTweetWithComments);
 router.get("/tweets", getTweets)
 

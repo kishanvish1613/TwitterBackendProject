@@ -30,6 +30,5 @@ app.get("/", async (req, res) => {
 app.listen(PORT, async () => {
   console.log(`server started at ${PORT}`);
   connect();
-  console.log("Views directory path:", path.resolve("views"));
   console.log("mongo DB connected");
 });

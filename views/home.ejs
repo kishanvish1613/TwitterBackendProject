@@ -3,9 +3,404 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        html, body {
+            /* background-color: #0f172a; */
+            color: black;
+            font-family: SF Pro Display;
+        }
+
+        a {
+            color: #1c9bf7;
+            text-decoration: none;
+        }
+
+        a.clicked {
+            color: #1c9bf7;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100vw;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #how-to-use {
+            width: 90vw;
+            height: 10vh;
+            padding-top: 30px;
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
+
+        #title-heading {
+            width: max-content;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #version-show {
+            position: absolute;
+            top: 5%;
+            right: -13%;
+            font-size: 0.7vw;
+            padding-left: 3px;
+            padding-right: 3px;
+            border-radius: 30px;
+            background-color: #1c9bf7;
+        }
+
+        #clone-show {
+            position: absolute;
+            top: 42%;
+            right: -16%;
+        }
+
+        #intro {
+            width: 90vw;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            overflow: hidden;
+        }
+
+        #Getting-Started {
+            margin-top: 20px;
+            width: 90vw;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            overflow: hidden;
+        }
+
+        #Getting-Started-desc {
+            padding-left: 30px;
+        }
+
+        #display-method {
+            margin-top: 20px;
+            width: 90vw;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 100%;
+            height: 6vh;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 7px;
+            gap: 10px;
+        }
+
+        .method-box {
+            width: 7%;
+            height: 4.5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 7px;
+            color: white;
+        }
+
+        .path-box {
+            width: max-content;
+            height: 4.5vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 7px;
+        }
+
+        .path-desc {
+            width: max-content;
+            height: 4.5vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 7px;
+            border: 1px solid rgb(47, 0, 255);
+            position: relative;
+        }
+
+        .lock-icon {
+            position: absolute;
+            right: 6%;
+            width: max-content;
+            height: 4.5vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 7px;
+            /* border: 1px solid rgb(47, 0, 255); */
+        }
+
+        .span-id {
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 5px;
+            background-color: #ededed;
+        }
+
+        #some-example {
+            margin-top: 20px;
+            width: 90vw;
+            height: max-content;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        .main-box {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .example-heading {
+            width: max-content;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .example-desc {
+            width: max-content;
+            padding-left: 20px;
+        }
+
+        .example-desc ol {
+            padding-left: 18px
+        }
+
+        .img-box {
+            width: 100%;
+            height: 40vh;
+            border: 1px solid red;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #clone-project {
+            width: 90vw;
+            height: max-content;
+            margin-top: 20px;
+        }
+
+        #gitclone {
+            margin-top: 15px;
+            padding-left: 50px;
+        }
+
+        #gitclone p {
+            margin: 8px;
+        }
+
+        #config {
+            width: 90vw;
+            height: max-content;
+            margin-top: 20px;
+        }
+
+        #config-para {
+            margin-top: 15px;
+            padding-left: 50px;
+        }
+
+        #config-para p {
+            margin: 8px;
+        }
+
+        #Getting-Started-desc {
+            margin-top: 15px;
+            padding-left: 90px;
+            font-size: 1vw;
+        }
+
+
+    </style>
 </head>
 <body>
-    <h1>How to use</h1>
+    <div class="container">
+        <div id="how-to-use">
+            <div id="title-heading">
+                <h1>TweeterBackendApi</h1>
+                <div id="version-show"><p>1.0.0</p></div>
+                <div id="clone-show"><p>Clone</p></div>
+            </div>
+        </div>
+        <div id="intro">
+            <h2>Introducation</h2>
+            <h3>Hello👋!</h3>
+            <p>This project is a web api that mimics the core features of Twitter, such as <span class="span-id">posting tweets</span>, <span class="span-id">commenting on posts</span>, and <span class="span-id">uploading images</span>. Users can also create new accounts and <span class="span-id">signIn</span> or <span class="span-id">signUp</span> using <span class="span-id">JsonWebToken</span> for secure authentication.<br><br>
+            The project is developed by <span class="span-id"><a href="https://github.com/kishanvish1613/">@kishan.dev</a></span> using Node.js, Express, S3, and other technologies. It is an API that can be integrated with any front-end framework or library.</p>
+        </div>
+        <div id="Getting-Started">
+            <div id="Getting-Started-heading">
+                <h2>Getting Started</h2>
+            </div>
+            <div id="Getting-Started-desc">
+                <ul>
+                    <li>Use Postman</li>
+                    <li>Use Axios</li>
+                    <li>Use Fetch</li>
+                </ul>
+            </div>
+        </div>
+        <div id="display-method">
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #49cc90;">
+                <div class="method-box" style=" background-color: #49cc90;"><p>GET</p></div>
+                <div class="path-box"><p>/api/v1/tweets</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #fca130;">
+                <div class="method-box" style=" background-color: #fca130;"><p>GET</p></div>
+                <div class="path-box"><p>/api/v1/tweets/:id</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #61affe;">
+                <div class="method-box" style=" background-color: #61affe;"><p>POST</p></div>
+                <div class="path-box"><p>/api/v1/tweets</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #EEA5A6;">
+                <div class="method-box" style=" background-color: #EEA5A6;"><p>POST</p></div>
+                <div class="path-box"><p>/api/v1/signUp</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #50623A;">
+                <div class="method-box" style=" background-color: #50623A;"><p>POST</p></div>
+                <div class="path-box"><p>/api/v1/signIn</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #7FC7D9;">
+                <div class="method-box" style=" background-color: #7FC7D9;"><p>POST</p></div>
+                <div class="path-box"><p>/api/v1/likes/toggle</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #FFE382;">
+                <div class="method-box" style=" background-color: #FFE382;"><p>POST</p></div>
+                <div class="path-box"><p>/api/v1/comments</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #C6A969;">
+                <div class="method-box" style=" background-color: #C6A969;"><p>GET</p></div>
+                <div class="path-box"><p>/api/v1/comments/:id</p></div>
+                <div class="path-desc"></div>
+                <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+            </div>
+        </div>
+        <div id="some-example">
+            <div><h2>Examples</h2></div>
+            <div class="main-box">
+                <div class="example-heading"><h3>signIn✏️</h3></div>
+                <div class="example-desc">
+                    <p>takes two parameters</p>
+                        <ol>
+                            <li>email</li>
+                            <li>password</li>
+                        </ol>
+                </div>
+                <div class="img-box">
+                    <div>
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="clone-project">
+            <div id="clone-heading">
+                <h2>Setup this project</h2>
+                <p>On your local machine</p>
+            </div>
+            <div id="gitclone">
+                <p><i class="ri-corner-down-right-line"></i>Clone repository: <span class="span-id">git clone`https://github.com/kishanvish1613/TwitterBackendProject.git`</span></p>
+                <p><i class="ri-corner-down-right-line"></i>Navigate to project directory: <span class="span-id">cd twitter-backend-clone</span></p>
+                <p><i class="ri-corner-down-right-line"></i>Install dependencies: <span class="span-id">npm install</span></p>
+            </div>
+            <div id="config">
+                <h3>Configuration Steps</h3>
+                <div id="config-para">
+                    <p><i class="ri-corner-down-right-line"></i>make a file on root dir <span class="span-id">.env</span></p>
+                    <p><i class="ri-corner-down-right-line"></i>Update these values of <span class="span-id">environment variables</span> in <span class="span-id">.env</span> file</p>
+                </div>
+                <div id="Getting-Started-desc">
+                    <ul>
+                        <li>AWS_REGION</li>
+                        <li>AWS_SECRET_ACCESS_KEY</li>
+                        <li>BUCKET_NAME</li>
+                        <li>PORT</li>
+                        <li>MONGO_URL</li>
+                    </ul>
+                    <p>Done✌️</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+
 </body>
 </html>
+
+

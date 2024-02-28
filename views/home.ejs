@@ -32,8 +32,7 @@
             text-decoration: none;
         }
 
-        @media only screen and (max-width: 426px) {
-            .container {
+        .container {
                 width: 100vw;
                 height: max-content;
                 display: flex;
@@ -228,9 +227,148 @@
                 padding-left: 50px;
             }
 
+            #footer {
+                width: 90vw;
+                height: max-content;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            #icon-link-box {
+                display: flex;
+                gap: 10px;
+            }
+
+            .link-class {
+                margin-top: 5px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 7px;
+                border: 1.5px solid #61affe;
+            }
+
+        @media only screen and (max-width: 426px) {
+            .path-desc {
+                overflow: hidden;
+                display: none;
+                position: relative;
+            }
         }
 
+        @media only screen and (min-width: 426px) and (max-width: 769px) {
+            .path-desc {
+                position: relative;
+                color: #717576;
+            }
 
+            #how-to-use {
+                width: 90vw;
+                height: 10vh;
+                padding-top: 20px;
+            }
+
+            #title-heading {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                position: relative;
+                font-size: 2.5vw;
+            }
+
+            #version-show {
+                position: absolute;
+                top: 5%;
+                right: -12%;
+                font-size: 1.5vw;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 30px;
+                background-color: #1c9bf7;
+            }
+
+            #clone-show {
+                position: absolute;
+                top: 43%;
+                right: -16%;
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 1025px) {
+            .path-desc {
+                position: relative;
+                color: #717576;
+            }
+
+            #how-to-use {
+                width: 90vw;
+                height: 10vh;
+                padding-top: 20px;
+            }
+
+            #title-heading {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                position: relative;
+                font-size: 2vw;
+            }
+
+            #version-show {
+                position: absolute;
+                top: 5%;
+                right: -12%;
+                font-size: 1.2vw;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 30px;
+                background-color: #1c9bf7;
+            }
+
+            #clone-show {
+                position: absolute;
+                top: 43%;
+                right: -16%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1441px) {
+            .path-desc {
+                position: relative;
+                color: #717576;
+            }
+
+            #how-to-use {
+                width: 90vw;
+                height: 10vh;
+                padding-top: 20px;
+            }
+
+            #title-heading {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                position: relative;
+                font-size: 1.7vw;
+            }
+
+            #version-show {
+                position: absolute;
+                top: 5%;
+                right: -12%;
+                font-size: 1vw;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 30px;
+                background-color: #1c9bf7;
+            }
+
+            #clone-show {
+                position: absolute;
+                top: 43%;
+                right: -16%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -264,62 +402,94 @@
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #49cc90;">
                 <div class="method-box" style=" background-color: #49cc90;"><p>GET</p></div>
                 <div class="path-box"><p>/api/v1/tweets</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>fetch all tweet</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #fca130;">
                 <div class="method-box" style=" background-color: #fca130;"><p>GET</p></div>
                 <div class="path-box"><p>/api/v1/tweets/:id</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>fetch a tweet by id</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #61affe;">
                 <div class="method-box" style=" background-color: #61affe;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/tweets</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>create a tweet</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #EEA5A6;">
                 <div class="method-box" style=" background-color: #EEA5A6;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/signUp</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>login by email, password and token</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
-            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #50623A;">
-                <div class="method-box" style=" background-color: #50623A;"><p>POST</p></div>
+            <div class="box" style=" background-color: #fbf1e6; border: 2px solid #8ba171;">
+                <div class="method-box" style=" background-color: #8ba171;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/signIn</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>create a account</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #7FC7D9;">
                 <div class="method-box" style=" background-color: #7FC7D9;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/likes/toggle</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>like on tweet/comment</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #FFE382;">
                 <div class="method-box" style=" background-color: #FFE382;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/comments</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>post a comment on tweet/comment</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #C6A969;">
                 <div class="method-box" style=" background-color: #C6A969;"><p>GET</p></div>
                 <div class="path-box"><p>/api/v1/comments/:id</p></div>
-                <div class="path-desc"></div>
+                <div class="path-desc"><p>fetch a comment by id</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
             </div>
         </div>
         <div id="some-example">
-            <div><h2>Examples</h2></div>
+            <div><h2>How to pass values</h2></div>
             <div class="main-box">
-                <div class="example-heading"><h3>signIn✏️</h3></div>
+                <div class="example-heading"><h3>signIn <i class="ri-edit-line" style="color: grey;"></i></h3></div>
                 <div class="example-desc">
                     <p>takes two parameters</p>
                         <ol>
                             <li>email</li>
                             <li>password</li>
+                            <li>return a JWT token</li>
                         </ol>
+                </div>
+                <div class="example-heading"><h3>signUp <i class="ri-login-circle-line" style="color: orange;"></i></h3></div>
+                <div class="example-desc">
+                    <p>takes three parameters</p>
+                        <ol>
+                            <li>email</li>
+                            <li>password</li>
+                            <li>JWT token 'pass it as a bearer token'</li>
+                        </ol>
+                </div>
+                <div class="example-heading"><h3>Post a Tweet <i class="ri-twitch-line" style="color: rgb(150, 150, 239);"></i></h3></div>
+                <div class="example-desc">
+                    <p>takes three parameters</p>
+                        <ol>
+                            <li>email</li>
+                            <li>password</li>
+                            <li>JWT token 'pass it as a bearer token'</li>
+                        </ol>
+                </div>
+                <div class="example-heading"><h3>Like on tweet/comment <i class="ri-heart-3-line" style="color: red;"></i></h3></div>
+                <div class="example-desc">
+                    <p>takes three parameters</p>
+                        <ol>
+                            <li>modelId - 'id of tweet/comment'</li>
+                            <li>modelType - 'tweet/comment'</li>
+                            <li>userId - 'user id'</li>
+                        </ol>
+                </div>
+                <div class="example-heading"><h3></h3></div>
+                <div class="example-desc">
+                    <p>For more info.. <a href="https://github.com/kishanvish1613/TwitterBackendProject">check-out</a></p>
                 </div>
             </div>
         </div>
@@ -358,10 +528,13 @@
             </div>
         </div>
         <div id="footer">
-
+            <div><h3>Contact Me</h3></div>
+            <div id="icon-link-box">
+                <div class="link-class"><a href="https://www.linkedin.com/in/kishan-vishwakarma-36011025b "><i class="ri-linkedin-fill"></i> LinkedIn</a></div>
+                <div class="link-class"><a href="https://github.com/kishanvish1613/"><i class="ri-github-line"></i> Github</a></div>
+            </div>
         </div>
     </div>
 
 </body>
 </html>
-

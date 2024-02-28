@@ -32,241 +32,202 @@
             text-decoration: none;
         }
 
-        .container {
-            width: 100vw;
-            height: max-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 8px;
-        }
+        @media only screen and (max-width: 426px) {
+            .container {
+                width: 100vw;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 8px;
+            }
 
-        #how-to-use {
-            width: 90vw;
-            height: 10vh;
-            padding-top: 30px;
-            overflow: hidden;
-            /* border: 1px solid red; */
-        }
+            #how-to-use {
+                width: 90vw;
+                height: 10vh;
+                padding-top: 20px;
+            }
 
-        #title-heading {
-            width: max-content;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+            #title-heading {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                position: relative;
+                font-size: 4vw;
+            }
 
-        #version-show {
-            position: absolute;
-            top: 5%;
-            right: -13%;
-            font-size: 0.7vw;
-            padding-left: 3px;
-            padding-right: 3px;
-            border-radius: 30px;
-            background-color: #1c9bf7;
-        }
+            #version-show {
+                position: absolute;
+                top: 5%;
+                right: -12%;
+                font-size: 2.5vw;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 30px;
+                background-color: #1c9bf7;
+            }
 
-        #clone-show {
-            position: absolute;
-            top: 42%;
-            right: -16%;
-        }
+            #clone-show {
+                position: absolute;
+                top: 43%;
+                right: -16%;
+            }
 
-        #intro {
-            width: 90vw;
-            height: max-content;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 8px;
-            overflow: hidden;
-        }
+            #intro {
+                width: 90vw;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 8px;
+                overflow: hidden;
+            }
 
-        #Getting-Started {
-            margin-top: 20px;
-            width: 90vw;
-            height: max-content;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 8px;
-            overflow: hidden;
-        }
+            #intro p {
+                line-height: 1.4;
+            }
 
-        #Getting-Started-desc {
-            padding-left: 30px;
-        }
+            .span-id {
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 5px;
+                background-color: #ededed;
+            }
 
-        #display-method {
-            margin-top: 20px;
-            width: 90vw;
-            height: max-content;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 15px;
-            overflow: hidden;
-        }
+            #Getting-Started {
+                margin-top: 20px;
+                width: 90vw;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 8px;
+                overflow: hidden;
+            }
 
-        .box {
-            width: 100%;
-            height: 6vh;
-            display: flex;
-            align-items: center;
-            padding-left: 8px;
-            padding-right: 8px;
-            border-radius: 7px;
-            gap: 10px;
-        }
+            #Getting-Started-desc {
+                padding-left: 50px;
+            }
 
-        .method-box {
-            width: 7%;
-            height: 4.5vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border-radius: 7px;
-            color: white;
-        }
+            #display-method {
+                margin-top: 20px;
+                width: 90vw;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+                overflow: hidden;
+            }
 
-        .path-box {
-            width: max-content;
-            height: 4.5vh;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-left: 8px;
-            padding-right: 8px;
-            border-radius: 7px;
-        }
+            .box {
+                width: 100%;
+                height: 6vh;
+                display: flex;
+                align-items: center;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                gap: 10px;
+            }
 
-        .path-desc {
-            width: max-content;
-            height: 4.5vh;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-left: 8px;
-            padding-right: 8px;
-            border-radius: 7px;
-            border: 1px solid rgb(47, 0, 255);
-            position: relative;
-        }
+            .method-box {
+                width: max-content;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 5px;
+                padding-left: 13px;
+                padding-right: 13px;
+                border-radius: 7px;
+                color: white;
+            }
 
-        .lock-icon {
-            position: absolute;
-            right: 6%;
-            width: max-content;
-            height: 4.5vh;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-left: 8px;
-            padding-right: 8px;
-            border-radius: 7px;
-            /* border: 1px solid rgb(47, 0, 255); */
-        }
+            .path-box {
+                width: max-content;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
 
-        .span-id {
-            padding-left: 5px;
-            padding-right: 5px;
-            border-radius: 5px;
-            background-color: #ededed;
-        }
+            .path-desc {
+                overflow: hidden;
+                position: relative;
+            }
 
-        #some-example {
-            margin-top: 20px;
-            width: 90vw;
-            height: max-content;
-            border: 1px solid red;
-            overflow: hidden;
-        }
+            .lock-icon {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+            }
 
-        .main-box {
-            width: 100%;
-            height: 50vh;
-        }
+            #some-example {
+                margin-top: 20px;
+                width: 90vw;
+                height: max-content;
+                overflow: hidden;
+            }
 
-        .example-heading {
-            width: max-content;
-            padding-left: 20px;
-            margin-top: 10px;
-        }
+            .main-box {
+                width: 100%;
+                height: max-content;
+            }
 
-        .example-desc {
-            width: max-content;
-            padding-left: 20px;
-        }
+            .example-heading {
+                width: max-content;
+                margin-top: 10px;
+            }
 
-        .example-desc ol {
-            padding-left: 18px
-        }
+            .example-desc {
+                width: max-content;
+            }
 
-        .img-box {
-            width: 100%;
-            height: 40vh;
-            border: 1px solid red;
-        }
+            .example-desc ol {
+                padding-left: 18px
+            }
 
+            #clone-project {
+                width: 90vw;
+                height: max-content;
+                margin-top: 20px;
+                overflow: hidden;
+            }
 
+            #gitclone {
+                margin-top: 15px;
+            }
 
+            #git-clone-box {
+                overflow-x: scroll; 
+                height: max-content;
+            }
 
+            #config {
+                width: 90vw;
+                height: max-content;
+                margin-top: 20px;
+            }
 
+            #config-para p {
+                margin: 8px;
+            }
 
+            #Getting-Started-desc-1 {
+                margin-top: 15px;
+                padding-left: 50px;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        #clone-project {
-            width: 90vw;
-            height: max-content;
-            margin-top: 20px;
-        }
-
-        #gitclone {
-            margin-top: 15px;
-            padding-left: 50px;
-        }
-
-        #gitclone p {
-            margin: 8px;
-        }
-
-        #config {
-            width: 90vw;
-            height: max-content;
-            margin-top: 20px;
-        }
-
-        #config-para {
-            margin-top: 15px;
-            padding-left: 50px;
-        }
-
-        #config-para p {
-            margin: 8px;
-        }
-
-        #Getting-Started-desc {
-            margin-top: 15px;
-            padding-left: 90px;
-            font-size: 1vw;
         }
 
 
@@ -289,7 +250,7 @@
         </div>
         <div id="Getting-Started">
             <div id="Getting-Started-heading">
-                <h2>Getting Started</h2>
+                <h2>Getting started</h2>
             </div>
             <div id="Getting-Started-desc">
                 <ul>
@@ -360,11 +321,6 @@
                             <li>password</li>
                         </ol>
                 </div>
-                <div class="img-box">
-                    <div>
-                        <img src="">
-                    </div>
-                </div>
             </div>
         </div>
         <div id="clone-project">
@@ -373,17 +329,24 @@
                 <p>On your local machine</p>
             </div>
             <div id="gitclone">
-                <p><i class="ri-corner-down-right-line"></i>Clone repository: <span class="span-id">git clone`https://github.com/kishanvish1613/TwitterBackendProject.git`</span></p>
+                <div>
+                    <div>
+                        <i class="ri-corner-down-right-line"></i>Clone repository:
+                    </div>
+                    <div id="git-clone-box">
+                        <span class="span-id">git clone`https://github.com/kishanvish1613/TwitterBackendProject.git`</span>
+                    </div>
+                </div>
                 <p><i class="ri-corner-down-right-line"></i>Navigate to project directory: <span class="span-id">cd twitter-backend-clone</span></p>
                 <p><i class="ri-corner-down-right-line"></i>Install dependencies: <span class="span-id">npm install</span></p>
             </div>
             <div id="config">
-                <h3>Configuration Steps</h3>
+                <h2>Configuration Steps</h2>
                 <div id="config-para">
                     <p><i class="ri-corner-down-right-line"></i>make a file on root dir <span class="span-id">.env</span></p>
                     <p><i class="ri-corner-down-right-line"></i>Update these values of <span class="span-id">environment variables</span> in <span class="span-id">.env</span> file</p>
                 </div>
-                <div id="Getting-Started-desc">
+                <div id="Getting-Started-desc-1">
                     <ul>
                         <li>AWS_REGION</li>
                         <li>AWS_SECRET_ACCESS_KEY</li>
@@ -391,7 +354,6 @@
                         <li>PORT</li>
                         <li>MONGO_URL</li>
                     </ul>
-                    <p>Done✌️</p>
                 </div>
             </div>
         </div>
@@ -402,5 +364,4 @@
 
 </body>
 </html>
-
 

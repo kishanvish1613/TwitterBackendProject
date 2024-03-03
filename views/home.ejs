@@ -169,7 +169,25 @@
                 padding-left: 8px;
                 padding-right: 8px;
                 border-radius: 7px;
+                transition: 0.5s ease-in-out;
             }
+
+            .copy-icon-box {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                opacity: 1;
+                transition: 1s ease;
+                cursor: pointer;
+            }
+
 
             #some-example {
                 margin-top: 20px;
@@ -254,6 +272,36 @@
                 display: none;
                 position: relative;
             }
+
+            .lock-icon {
+                position: absolute;
+                right: 12%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .copy-icon-box {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                opacity: 1;
+                transition: 1s ease;
+                cursor: pointer;
+            }
         }
 
         @media only screen and (min-width: 426px) and (max-width: 769px) {
@@ -285,6 +333,36 @@
                 padding-right: 3px;
                 border-radius: 30px;
                 background-color: #1c9bf7;
+            }
+
+            .lock-icon {
+                position: absolute;
+                right: 9%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .copy-icon-box {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                opacity: 1;
+                transition: 1s ease;
+                cursor: pointer;
             }
 
             #clone-show {
@@ -325,6 +403,36 @@
                 background-color: #1c9bf7;
             }
 
+            .lock-icon {
+                position: absolute;
+                right: 9%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .copy-icon-box {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                opacity: 1;
+                transition: 1s ease;
+                cursor: pointer;
+            }
+
             #clone-show {
                 position: absolute;
                 top: 43%;
@@ -361,6 +469,36 @@
                 padding-right: 3px;
                 border-radius: 30px;
                 background-color: #1c9bf7;
+            }
+
+            .lock-icon {
+                position: absolute;
+                right: 8%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .copy-icon-box {
+                position: absolute;
+                right: 6%;
+                width: max-content;
+                height: 4.5vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 7px;
+                opacity: 1;
+                transition: 1s ease;
+                cursor: pointer;
             }
 
             #clone-show {
@@ -404,48 +542,56 @@
                 <div class="path-box"><p>/api/v1/tweets</p></div>
                 <div class="path-desc"><p>fetch all tweet</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/tweets/"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #fca130;">
                 <div class="method-box" style=" background-color: #fca130;"><p>GET</p></div>
                 <div class="path-box"><p>/api/v1/tweets/:id</p></div>
                 <div class="path-desc"><p>fetch a tweet by id</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/tweets/"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #61affe;">
                 <div class="method-box" style=" background-color: #61affe;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/tweets</p></div>
                 <div class="path-desc"><p>create a tweet</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/tweets"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #EEA5A6;">
                 <div class="method-box" style=" background-color: #EEA5A6;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/signUp</p></div>
                 <div class="path-desc"><p>login by email, password and token</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/signUp"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #8ba171;">
                 <div class="method-box" style=" background-color: #8ba171;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/signIn</p></div>
                 <div class="path-desc"><p>create a account</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/signIn"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #7FC7D9;">
                 <div class="method-box" style=" background-color: #7FC7D9;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/likes/toggle</p></div>
                 <div class="path-desc"><p>like on tweet/comment</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/likes/toggle"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #FFE382;">
                 <div class="method-box" style=" background-color: #FFE382;"><p>POST</p></div>
                 <div class="path-box"><p>/api/v1/comments</p></div>
                 <div class="path-desc"><p>post a comment on tweet/comment</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/comment"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
             <div class="box" style=" background-color: #fbf1e6; border: 2px solid #C6A969;">
                 <div class="method-box" style=" background-color: #C6A969;"><p>GET</p></div>
                 <div class="path-box"><p>/api/v1/comments/:id</p></div>
                 <div class="path-desc"><p>fetch a comment by id</p></div>
                 <div class="lock-icon"><i class="ri-git-repository-private-line"></i></div>
+                <div class="copy-icon-box"><a href="https://twitterbackendproject.onrender.com/api/v1/comments/"><i class="ri-arrow-right-up-line"></i></a></div>
             </div>
         </div>
         <div id="some-example">
@@ -535,6 +681,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>

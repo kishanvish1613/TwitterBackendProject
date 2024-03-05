@@ -20,11 +20,13 @@ const upload = multer({
         s3: s3Client,
         bucket: process.env.BUCKET_NAME,
         acl: 'public-read',
+        contentType: multerS3.AUTO_CONTENT_TYPE,
         metadata: function (req, file, cb) {
-            cb(null, { fieldName: file.fieldname });
+            cb(null, {fieldName: file.fieldname});
         },
         key: function (req, file, cb) {
-            cb(null, Date.now().toString());
+            const fileExtension = file.originalname.split('.').pop();
+            cb(null, Date.now().toString() + '.' + fileExtension);
         }
     })
 });

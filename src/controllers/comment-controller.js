@@ -5,8 +5,8 @@ const commentService = new CommentService();
 export const createComment = async (req, res) => {
   try {
     const result = await commentService.create(
-      req.query.modelId,
-      req.query.modelType,
+      req.body.modelId,
+      req.body.modelType,
       req.body.userId,
       req.body.content
     );

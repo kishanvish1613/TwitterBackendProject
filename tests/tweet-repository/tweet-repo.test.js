@@ -63,4 +63,21 @@ describe("find tweet tests", () => {
 
     expect(res[0].content).toBe(data.content);
   });
+
+  test("should not get all tweets and return exception", async () => {
+
+    const spy = jest.spyOn(Tweet, 'find').mockImplementation(() => {
+      return 'Something went wrong';
+    })
+
+    const tweetRepository = new TweetRepository();
+
+    expect(spy).toHaveBeenCalled();
+    
+    const response = await tweetRepository.getAllTweets().catch((err) => {
+      expect(err).toBeInstanceOf(Error);
+      expect(err.message).toBe("Something went wrong")
+    });
+
+  });
 });

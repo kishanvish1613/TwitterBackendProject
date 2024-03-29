@@ -3,12 +3,14 @@
 Hello👋!
 This project is a web api that mimics the core features of Twitter, such as posting tweets, commenting on posts, and uploading images. Users can also create new accounts and signIn or signUp using JsonWebToken for secure authentication.
 
+To ensure data integrity and enhance API security, Zod input validation is implemented to verify that incoming data adheres to expected schema requirements. Additionally, Jest testing is integrated for both unit and integration testing, allowing for early identification of any issues within the API components.
+
 The project is developed by  [@kishan.dev](https://kishan-dev.onrender.com/) using Node.js, Express, S3, and other technologies. It is an API that can be integrated with any front-end framework or library.
 
 
 ### Setup this project on your local machine
 
-Clone repository: git clone`https://github.com/kishanvish1613/TwitterBackendProject.git`
+Clone repository: `git clone https://github.com/kishanvish1613/TwitterBackendProject.git`
 
 Navigate to project directory: `cd twitter-backend-clone`
 

@@ -1,6 +1,5 @@
 # TweeterBackendApi clone
 
-Introducation
 Hello👋!
 This project is a web api that mimics the core features of Twitter, such as posting tweets, commenting on posts, and uploading images. Users can also create new accounts and signIn or signUp using JsonWebToken for secure authentication.
 
